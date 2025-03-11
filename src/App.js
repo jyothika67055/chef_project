@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import CookAndChefApp from './pages/CookAndChefApp';
+import Login from './pages/Login';
+import ApplyForm from './pages/ApplyForm';
+import LoginIt from './pages/LoginIt';
+import ChefAcademy from './pages/ChefAcademy';
+import Main from './pages/Experts';
+import Recipe from './pages/Recipe';
+import LearnMore from './pages/LearnMore';
+import Recipes from './pages/Recipes';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/" element={<CookAndChefApp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/apply" element={<ApplyForm />} />
+        <Route path="/LoginIt" element={<LoginIt/>} />
+        <Route path="/chefacademy" element={<ChefAcademy />} />
+        <Route path="/experts" element={<Main/>} />
+        <Route path="/recipe" element={<Recipe />} />
+        <Route path="/learnmore" element={<LearnMore />} />
+        <Route path="/recipes" element={<Recipes />} />
+      </Routes>
     </div>
   );
 }
