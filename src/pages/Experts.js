@@ -51,11 +51,11 @@ function Main() {
   ];
 
 return (
-    <main className="container mx-auto mt-6 px-6" style={{ backgroundImage: "url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <main className="container mx-auto mt-6 px-6" style={{ backgroundImage: "url('https://media.istockphoto.com/id/1446478805/photo/a-chef-is-finishing-the-preparation-of-the-plate.jpg?s=612x612&w=0&k=20&c=OoFoYYJ0_eun72wlt-lDzlYjY-CaLwphDgUyIApDu_I=')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <a href="/" className="absolute top-4 left-4 bg-gray-800 opacity-40 text-white px-3 py-1 rounded-lg text-sm">
             Back to website →
         </a>
-        <h2 className="text-4xl font-bold text-center mb-6 text-black">Meet Our Renowned Chefs</h2>
+        <h2 className="text-4xl font-bold text-center mb-6 text-white">Meet Our Renowned Chefs</h2>
         {chefs.map((chef, index) => (
             <div className="flex items-center mb-6 bg-white bg-opacity-70 p-4 rounded" key={index}>
                 <img src={chef.image} alt={`Chef ${chef.name}`} className="h-32 w-32 rounded-full object-cover border-2 border-gray-500" />

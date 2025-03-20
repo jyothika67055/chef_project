@@ -9,6 +9,9 @@ import Main from './pages/Experts';
 import Recipe from './pages/Recipe';
 import LearnMore from './pages/LearnMore';
 import Recipes from './pages/Recipes';
+import BookChef from './pages/Book';
+import Home from './pages/Home';
+
 
 
 function App() {
@@ -24,6 +27,10 @@ function App() {
         <Route path="/recipe" element={<Recipe />} />
         <Route path="/learnmore" element={<LearnMore />} />
         <Route path="/recipes" element={<Recipes />} />
+        <Route path="/book" element={<BookChef />} />
+        <Route path="/home" element={<Home />} />
+        
+       
       </Routes>
     </div>
   );

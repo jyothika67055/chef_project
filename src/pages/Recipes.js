@@ -194,9 +194,9 @@ const Recipes = () => {
               <div className="relative group">
                 <Link to="/Recipes" className="text-gray-700 underline">Recipes</Link>
               </div>
-              <div className="relative group">
-                <Link to="/Techniques" className="text-gray-700 underline">Techniques <i className="fas fa-chevron-down"></i></Link>
-              </div>
+              <div className="flex space-x-4">
+              <Link to="/chefacademy" className="text-gray-700 text-font-bold underline">Contact</Link>
+            </div>
             </div>
             <div className="relative">
               <input className="border rounded-full px-4 py-1" type="text" placeholder='Search for "pasta"' />

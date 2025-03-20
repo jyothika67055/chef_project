@@ -66,10 +66,42 @@ const ChefAcademy = () => {
       </main>
 
 
-      <footer className="bg-white py-6 text-center text-sm border-t">
-        <p>Expat Deli (Aus) Pty Ltd &copy; 2008 Expat Deli. All Rights Reserved</p>
-        <p className="mt-2">Your details are safe with us</p>
-      </footer>
+      
+      <footer class="bg-gray-800 text-white py-10">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        
+       
+        <div>
+            <h2 class="text-2xl font-bold">Chef's Delight</h2>
+            <p class="mt-2 text-gray-400">Bringing you the best recipes and culinary experiences.</p>
+        </div>
+        
+  
+        <div>
+            <h3 class="text-xl font-semibold mb-3">Quick Links</h3>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="chefacademy" class="hover:text-yellow-400">About</a></li>
+                <li><a href="Recipes" class="hover:text-yellow-400">Recipes</a></li>
+                <li><a href="chefacademy" class="hover:text-yellow-400">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold mb-3">Contact Us</h3>
+            <p class="text-gray-400">Email: contact@chefdelight.com</p>
+            <p class="text-gray-400">Phone: +123 456 7890</p>
+            <div class="mt-4 flex justify-center md:justify-start space-x-4">
+                <a href="#" class="text-gray-400 hover:text-yellow-400 text-2xl"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-yellow-400 text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-yellow-400 text-2xl"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-8 text-gray-500">
+        <p>&copy; 2025 Chef's Delight. All Rights Reserved.</p>
+    </div>
+</footer>
+
     </div>
   );
 };

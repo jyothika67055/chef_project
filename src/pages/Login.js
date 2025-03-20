@@ -6,7 +6,8 @@ function Login() {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#e3e6d1] p-4">
+  
+    <div className="min-h-screen flex items-center justify-center bg-[#f1d0f1] p-4">
       <div className="grid md:grid-cols-2 gap-8 max-w-4xl w-full bg-white shadow-lg rounded-2xl overflow-hidden">
         <div className="relative">
           <img

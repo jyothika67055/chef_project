@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import img2 from './food2_img.jpg';
+// import img2 from './food2_img.jpg';
+import { Link } from 'react-router-dom';
+// import img1 from './logo_bg_remove.png';
+
 const ApplyForm = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -24,107 +27,81 @@ const ApplyForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center relative bg-gray-200">
-      <img src={img2} alt="background" className="absolute inset-0 w-full h-full object-cover opacity-90" />
-      
-      <div className="bg-white opacity-95 p-10 rounded-lg shadow-2xl w-full max-w-lg relative z-10">
-        <h2 className="text-3xl font-extrabold mb-8 text-center text-gray-800 ">Apply as a Chef</h2>
+    <>
+      <nav className="bg-[#932093] p-4 text-white flex justify-between">
+        <a className="text-xl font-bold" href="#">Chef Application</a>
+        <div className="flex space-x-4 text-white">
+          <Link to="/" className="underline font-bold text-white">Home</Link>
+          <Link to="/Recipes" className="text-white underline font-bold">Recipes</Link>
+          <Link to="/login" className="text-white underline font-bold">Sign In</Link>
+        </div>
+      </nav>
+
+      <div className="container mx-auto mt-10 p-6 max-w-lg shadow-lg rounded-lg bg-white">
+        <h2 className="text-2xl font-bold mb-4">Apply as a Chef</h2>
         <form onSubmit={handleSubmit}>
-          <div className="mb-6">
-            <label className="block text-gray-800 text-sm font-semibold mb-2" htmlFor="firstName">
-              First Name
-            </label>
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
+          <div className="mb-3">
+            <label className="block font-medium">First Name</label>
+            <input type="text" name="firstName" className="w-full p-2 border rounded" onChange={handleChange} required />
           </div>
-          <div className="mb-6">
-            <label className="block text-gray-800 text-sm font-semibold mb-2" htmlFor="lastName">
-              Last Name
-            </label>
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
+          <div className="mb-3">
+            <label className="block font-medium">Last Name</label>
+            <input type="text" name="lastName" className="w-full p-2 border rounded" onChange={handleChange} required />
           </div>
-          <div className="mb-6">
-            <label className="block text-gray-800 text-sm font-semibold mb-2" htmlFor="email">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
+          <div className="mb-3">
+            <label className="block font-medium">Email ID</label>
+            <input type="email" name="email" className="w-full p-2 border rounded" onChange={handleChange} required />
           </div>
-          <div className="mb-6">
-            <label className="block text-gray-800 text-sm font-semibold mb-2" htmlFor="phone">
-              Phone
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
+          <div className="mb-3">
+            <label className="block font-medium">Phone Number</label>
+            <input type="tel" name="phone" className="w-full p-2 border rounded" onChange={handleChange} required />
           </div>
-          <div className="mb-6">
-            <label className="block text-gray-800 text-sm font-semibold mb-2" htmlFor="experience">
-              Experience
-            </label>
-            <textarea
-              id="experience"
-              name="experience"
-              value={formData.experience}
-              onChange={handleChange}
-              className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            ></textarea>
+          <div className="mb-3">
+            <label className="block font-medium">Upload Resume</label>
+            <input type="file" name="resume" className="w-full p-2 border rounded" accept=".pdf,.doc,.docx" onChange={handleChange} required />
           </div>
-          <div className="mb-6">
-            <label className="block text-gray-800 text-sm font-semibold mb-2" htmlFor="resume">
-              Resume
-            </label>
-            <input
-              type="file"
-              id="resume"
-              name="resume"
-              onChange={handleChange}
-              className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-          </div>
-          <div className="flex items-center justify-between">
-            <button
-              type="submit"
-              className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              Submit Application
-            </button>
-          </div>
+          <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Submit</button>
         </form>
+        
       </div>
+      <br></br>
+      
+      <footer class="bg-[#390d39] text-white py-10">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        
+       
+        <div>
+            <h2 class="text-2xl font-bold">Chef's Delight</h2>
+            <p class="mt-2 text-gray-400">Bringing you the best recipes and culinary experiences.</p>
+        </div>
+        
+  
+        <div>
+            <h3 class="text-xl font-semibold mb-3">Quick Links</h3>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="chefacademy" class="hover:text-yellow-400">About</a></li>
+                <li><a href="Recipes" class="hover:text-yellow-400">Recipes</a></li>
+                <li><a href="chefacademy" class="hover:text-yellow-400">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold mb-3">Contact Us</h3>
+            <p class="text-gray-400">Email: contact@chefdelight.com</p>
+            <p class="text-gray-400">Phone: +123 456 7890</p>
+            <div class="mt-4 flex justify-center md:justify-start space-x-4">
+                <a href="#" class="text-gray-400 hover:text-yellow-400 text-2xl"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-yellow-400 text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-yellow-400 text-2xl"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
     </div>
+    <div class="text-center mt-8 text-gray-500">
+        <p>&copy; 2025 Chef's Delight. All Rights Reserved.</p>
+    </div>
+</footer>
+    </>
   );
 };
 
 export default ApplyForm;
-
